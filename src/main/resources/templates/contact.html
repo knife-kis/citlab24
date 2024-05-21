@@ -1,51 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <!-- Page Title -->
     <title>ЦИТ</title>
-
     <!-- Meta Data -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
-
     <!-- Favicon -->
-  
-
+    <script src="//code.jivo.ru/widget/tHwSNRdcm8" async></script>
     <!-- Web Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700">
-<script src="//code.jivo.ru/widget/tHwSNRdcm8" async></script>
     <!-- ======= Bootstrap CSS ======= -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
     <!-- ======= Font Awesome CSS ======= -->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
     <!-- ======= Owl Carousel CSS ======= -->
     <link rel="stylesheet" href="assets/plugins/owlcarousel/owl.carousel.min.css">
-
     <!-- ======= Magnific Popup CSS ======= -->
     <link rel="stylesheet" href="assets/plugins/magnific-popup/magnific-popup.min.css">
-
     <!-- ======= Main Stylesheet ======= -->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <!-- ======= Custom Stylesheet ======= -->
     <link rel="stylesheet" href="assets/css/custom.css">
-
 </head>
 
 <body>
 
     <!-- Preloader Begin -->
-    <div class='preloader w-100 h-100 position-fixed'>
-        <!--<div class="loader">
-            <!--<img class="icon" src="assets/img/preloader.png" alt="">
-        </div>-->
-    </div>
+    <div class='preloader w-100 h-100 position-fixed'></div>
     <!-- Preloader End -->
 
     <!-- Header Begin -->
@@ -57,7 +43,7 @@
                     <div class="col-lg-3 col-sm-4 col-8">
                         <!-- Logo Begin -->
                         <div class="logo">
-                            <a href="index.html">
+                            <a th:href="@{/}">
                                 <img class="default-logo" src="assets/img/logo.png" data-rjs="2" alt="">
                                 <img class="sticky-logo" src="assets/img/sticky_logo.png" data-rjs="2" alt="">
                             </a>
@@ -70,20 +56,17 @@
                         <div class="main-menu d-flex align-items-center justify-content-end">
                             <ul class="nav align-items-center">
                                 <li class=" menu-item-has-children" >
-                                    <a href="index.html">Главная</a>
-                                    
+                                    <a th:href="@{/}">Главная</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="service-details.html">Услуги</a>
+                                    <a th:href="@{/service-details}">Услуги</a>
                                </li>
-                                
                                 <li class="current-menu-parent menu-item-has-children">
-								<a href="contact.html">Контакты</a></li>
+                                    <a th:href="@{/contact}">Контакты</a>
                             </ul>
                             <!-- Offcanvas Holder Trigger -->
                             <span class="offcanvas-trigger text-right d-none d-lg-block">
                                 <span></span>
-                                
                             </span>
                             <!-- Offcanvas Trigger End -->
                         </div>
@@ -126,18 +109,8 @@
                     <h4>Latest Shots</h4>
                 </div>
                 <!-- Widget Logo End -->
-
-                <!--<ul class="d-flex flex-wrap">
-                    <li><a href="#"><img src="assets/img/flicker/f1.png" data-rjs="2" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/flicker/f2.png" data-rjs="2" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/flicker/f3.png" data-rjs="2" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/flicker/f4.png" data-rjs="2" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/flicker/f5.png" data-rjs="2" alt=""></a></li>
-                    <li><a href="#"><img src="assets/img/flicker/f6.png" data-rjs="2" alt=""></a></li>
-                </ul>-->
             </div>
             <!-- Flicker Widget End -->
-
             <!-- Contact Widget Begin -->
             <div class="widget widget_contact_info">
                 <!-- Widget Logo Begin -->
@@ -156,7 +129,7 @@
                     <div class="single-info">
                         <span>Support mail</span>
                         <p>
-                            <a href="#">Cit-krsk@yandex</a>
+                            <a href="mailto:Cit-krsk@yandex">Cit-krsk@yandex</a>
                             
                         </p>
                     </div>
