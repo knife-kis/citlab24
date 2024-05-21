@@ -9,7 +9,15 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("message", "Welcome to Cit!");
         return "index";
+    }
+
+    @GetMapping("/contact")
+    public String contact(Model model) {
+        return "contact";
+    }
+    @GetMapping("/service-details")
+    public String service(Model model) {
+        return "service-details";
     }
 }

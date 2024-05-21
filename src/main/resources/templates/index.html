@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
     <!-- Page Title -->
@@ -70,15 +71,15 @@
                         <div class="main-menu d-flex align-items-center justify-content-end">
                             <ul class="nav align-items-center">
                                 <li class="current-menu-parent menu-item-has-children" >
-                                    <a href="index.html">Главная</a>
+                                    <a th:href="@{/}">Главная</a>
                                     
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="service-details.html">Услуги</a>
+                                    <a th:href="@{/service-details}">Услуги</a>
                                </li>
                                 
                                 <li class="menu-item-has-children">
-								<a href="contact.html">Контакты</a></li>
+                                    <a th:href="@{/contact}">Контакты</a>
                             </ul>
                             <!-- Offcanvas Holder Trigger -->
                             <span class="offcanvas-trigger text-right d-none d-lg-block">
@@ -470,10 +471,9 @@
 
                             <!-- Menu Begin -->
                             <ul class="menu">
-                                <li><a href="index.html">Главная</a></li>
-                                <li><a href="service-details.html">Услуги</a></li>
-                                <li><a href="contact.html">Контакты</a></li>
-                                
+                                <li><a th:href="@{/}">Главная</a></li>
+                                <li><a th:href="@{/service-details}">Услуги</a></li>
+                                <li><a th:href="@{/contact}">Контакты</a></li>
                             </ul>
                             <!-- Menu End -->
                         </div>
