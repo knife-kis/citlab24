@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head th:replace="fragments/header :: head"></head>
+<head th:replace="~{fragments/header :: head}"></head>
 <body>
     <!-- Preloader Begin -->
     <div class='preloader w-100 h-100 position-fixed'></div>
     <!-- Preloader End -->
 
     <!-- Header Begin -->
-    <div th:replace="fragments/header :: header"></div>
+    <div th:replace="~{fragments/header :: header}"></div>
     <!-- Header End -->
 
     <!-- Offcanvas Begin -->
@@ -298,7 +298,7 @@
     <!-- Testimonial End -->
 
     <!-- Footer Begin -->
-    <div th:replace="fragments/footer :: footer"></div>
+    <div th:replace="~{fragments/footer :: footer}"></div>
     <!-- Footer End -->
 
     <script src="assets/js/jquery.min.js"></script>
