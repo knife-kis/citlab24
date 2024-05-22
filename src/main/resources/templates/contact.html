@@ -1,84 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <!-- Page Title -->
-    <title>ЦИТ</title>
-    <!-- Meta Data -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- Favicon -->
-    <script src="//code.jivo.ru/widget/tHwSNRdcm8" async></script>
-    <!-- Web Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700">
-    <!-- ======= Bootstrap CSS ======= -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- ======= Font Awesome CSS ======= -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!-- ======= Owl Carousel CSS ======= -->
-    <link rel="stylesheet" href="assets/plugins/owlcarousel/owl.carousel.min.css">
-    <!-- ======= Magnific Popup CSS ======= -->
-    <link rel="stylesheet" href="assets/plugins/magnific-popup/magnific-popup.min.css">
-    <!-- ======= Main Stylesheet ======= -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- ======= Custom Stylesheet ======= -->
-    <link rel="stylesheet" href="assets/css/custom.css">
-</head>
-
+<head th:replace="~{fragments/header :: head}"></head>
 <body>
-
-    <!-- Preloader Begin -->
     <div class='preloader w-100 h-100 position-fixed'></div>
-    <!-- Preloader End -->
-
-    <!-- Header Begin -->
-    <header class="header fixed-top">
-        <!-- Header Style One Begin -->
-        <div class="fixed-top header-main style--one">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-sm-4 col-8">
-                        <!-- Logo Begin -->
-                        <div class="logo">
-                            <a th:href="@{/}">
-                                <img class="default-logo" src="assets/img/logo.png" data-rjs="2" alt="">
-                                <img class="sticky-logo" src="assets/img/sticky_logo.png" data-rjs="2" alt="">
-                            </a>
-                        </div>
-                        <!-- Logo End -->
-                    </div>
-
-                    <div class="col-lg-9 col-sm-8 col-4">
-                        <!-- Main Menu Begin -->
-                        <div class="main-menu d-flex align-items-center justify-content-end">
-                            <ul class="nav align-items-center">
-                                <li class=" menu-item-has-children" >
-                                    <a th:href="@{/}">Главная</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a th:href="@{/service-details}">Услуги</a>
-                               </li>
-                                <li class="current-menu-parent menu-item-has-children">
-                                    <a th:href="@{/contact}">Контакты</a>
-                            </ul>
-                            <!-- Offcanvas Holder Trigger -->
-                            <span class="offcanvas-trigger text-right d-none d-lg-block">
-                                <span></span>
-                            </span>
-                            <!-- Offcanvas Trigger End -->
-                        </div>
-                        <!-- Main Menu ENd -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Header Style One End -->
-    </header>
-    <!-- Header End -->
-
+    <div th:replace="~{fragments/header :: header}"></div>
     <!-- Offcanvas Begin -->
     <div class="offcanvas-overlay fixed-top w-100 h-100"></div>
     <div class="offcanvas-wrapper bg-white fixed-top h-100">
@@ -125,19 +51,16 @@
                         <span>Расположение офиса</span>
                         <p>660041, Красноярский край, г. Красноярск, пр. Свободный дом 75, пом. 9, кабинет 12</p>
                     </div>
-                    
                     <div class="single-info">
                         <span>Support mail</span>
                         <p>
                             <a href="mailto:Cit-krsk@yandex">Cit-krsk@yandex</a>
-                            
                         </p>
                     </div>
                 </div>
                 <!-- Widget Content End -->
             </div>
             <!-- About Widget End -->
-
             <!-- Offcanvas Button Begin -->
             <div class="offcanvas-btn">
                 <a href="#" class="btn"><span>Get Appointment</span></a>
@@ -155,14 +78,12 @@
                 <div class="col-12">
                     <div class="page-title text-center">
                         <h2>Контакты</h2>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Page Title End -->
-
     <!-- Contact Info Begin -->
     <section class="pt-120 pb-120">
         <div class="container">
@@ -222,23 +143,17 @@
                                 </div>
                             </div>
                             <!-- End Single Contact Info -->
-
                         </div>
                     </div>
                     <!-- Contact Info End -->
                 </div>
-
                 <div class="col-lg-8">
                     <!-- Contact Form Begin -->
                     <div class="contact-form-wrapper">
                         <h3>Расположение офиса</h3>
                         <p></p>
-
-                        
                     <div class="image">
-                        <img src="assets/img/map.png" class="png" alt="">
-                    </div>
-					
+                        <img src="assets/img/map.png" class="png" alt=""></div>
 					</div>
                     <!-- Contact Form End -->
                 </div>
@@ -246,136 +161,20 @@
         </div>
     </section>
     <!-- Contact Info End -->
-
-    <!-- Start Map -->
-    
-
     <!-- Footer Begin -->
-    <footer class="footer bg-light section-pattern footer-bg" data-bg-img="assets/img/section-pattern/footer-pattern.png">
-        <!-- Footer Top Begin -->
-        <div class="footer-top pt-60">
-            <div class="container border-bottom">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <!-- Contact Widget Begin -->
-                        <div class="widget widget_contact_info">
-                            <!-- Widget Logo Begin -->
-                            <div class="widget-logo">
-                                <img src="assets/img/footer_logo.png" data-rjs="2" alt="">
-                            </div>
-                            <!-- Widget Logo End -->
-
-                            <!-- Widget Content Begin -->
-                            <div class="info-content">
-                                <div class="single-info">
-                                    <span>Расположение офиса</span>
-                                    <p>г. Красноярск, пр. Свободный д. 75, пом. 9, кабинет 12</p>
-                                </div>
-                                <div class="single-info">
-                                    <span>Рабочий телефон</span>
-                                    <p><a href="#">+7(391)244-03-10</a></p>
-                                </div>
-                                <div class="single-info single-info-bottom ">
-                                    <span>Электронная почта</span>
-                                    <p>
-                                        <a href="#">Cit-krsk@yandex.ru</a> 
-                                       
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Widget Content End -->
-                        </div>
-                        <!-- About Widget End -->
-                    </div>
-                 
-                    <div class="col-lg-2 col-sm-6">
-                        <!-- Widget Quick Nav -->
-                        <div class="widget widget_nav_menu">
-                            <!-- Widget Title Begin  -->
-                            <div class="widget-title">
-                                <h4>Навигация</h4>
-                            </div>
-                            <!-- Widget Title End  -->
-
-                            <!-- Menu Begin -->
-                            <ul class="menu">
-                                <li><a href="index.html">Главная</a></li>
-                                <li><a href="service-details.html">Услуги</a></li>
-                                <li><a href="#">Контакты</a></li>
-                                
-                            </ul>
-                            <!-- Menu End -->
-                        </div>
-                        <!-- Widget Quick Nav -->
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Footer Top End -->
-
-        <!-- Footer Bottom Begin -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="copyright-text text-center">
-                            <span><a href="#"></a> &copy; Центр исследовательских технологий, 2023.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer Bottom End -->
-        
-    </footer>
-    <!-- Footer End -->
-
-    <!-- Back to Top Begin -->
-    <!--<a href="#" class="back-to-top position-fixed">
-        <div class="back-toop-tooltip"><span>Back To Top</span></div>
-        <div class="top-arrow"></div>
-        <div class="top-line"></div>
-    </a>-->
-    <!-- Back to Top End -->
-
-    <!-- ======= jQuery Library ======= -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
     <script src="assets/js/jquery.min.js"></script>
-    
-    <!-- ======= Bootstrap Bundle JS ======= -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- =======  Mobile Menu JS ======= -->
     <script src="assets/js/menu.min.js"></script>
-    
-    <!-- ======= Waypoints JS ======= -->
     <script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
-    
-    <!-- ======= Counter Up JS ======= -->
     <script src="assets/plugins/waypoints/jquery.counterup.min.js"></script>
-    
-    <!-- ======= Owl Carousel JS ======= -->
     <script src="assets/plugins/owlcarousel/owl.carousel.min.js"></script>
-    
-    <!-- ======= Isotope JS ====== -->
     <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
-    
-    <!-- ======= Magnific Popup JS ======= -->
     <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-    
-    <!-- ======= Countdown JS ======= -->
     <script src="assets/plugins/countdown/countdown.min.js"></script>
-    
-    <!-- ======= Retina JS ======= -->
     <script src="assets/plugins/retinajs/retina.min.js"></script>
-    
-    <!-- ======= Google API ======= -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0"></script>
-    
-    <!-- ======= Main JS ======= -->
     <script src="assets/js/main.js"></script>
-    
-    <!-- ======= Custom JS ======= -->
     <script src="assets/js/custom.js"></script>
 </body>
 
