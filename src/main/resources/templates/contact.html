@@ -13,7 +13,6 @@
             <img src="assets/img/icons/close.svg" class="svg" alt="">
         </div>
         <!-- Offcanvas Close Button End -->
-
         <!-- Offcanvas Content Begin -->
         <div class="offcanvas-content">
             <!-- About Widget Begin -->
@@ -27,57 +26,34 @@
                 </div>
             </div>
             <!-- About Widget End -->
-
-            <!-- Flicker Widget Begin -->
-            <div class="widget widget_flicker">
-                <!-- Widget Logo Begin -->
-                <div class="widget-title">
-                    <h4>Latest Shots</h4>
-                </div>
-                <!-- Widget Logo End -->
-            </div>
-            <!-- Flicker Widget End -->
             <!-- Contact Widget Begin -->
             <div class="widget widget_contact_info">
-                <!-- Widget Logo Begin -->
-                <div class="widget-title">
-                    <h4>Get in touch</h4>
-                </div>
-                <!-- Widget Logo End -->
-
                 <!-- Widget Content Begin -->
                 <div class="info-content">
                     <div class="single-info">
-                        <span>Расположение офиса</span>
-                        <p>660041, Красноярский край, г. Красноярск, пр. Свободный дом 75, пом. 9, кабинет 12</p>
+                        <span th:text="#{contact.officeLocation}"></span>
+                        <p th:text="#{contact.address}"></p>
                     </div>
                     <div class="single-info">
-                        <span>Support mail</span>
                         <p>
-                            <a href="mailto:Cit-krsk@yandex">Cit-krsk@yandex</a>
+                            <a th:text="#{contact.email}"></a>
                         </p>
                     </div>
                 </div>
                 <!-- Widget Content End -->
             </div>
             <!-- About Widget End -->
-            <!-- Offcanvas Button Begin -->
-            <div class="offcanvas-btn">
-                <a href="#" class="btn"><span>Get Appointment</span></a>
-            </div>
-            <!-- Offcanvas Button End -->
         </div>
         <!-- Offcanvas Content End -->
     </div>
     <!-- Offcanvas End -->
-
     <!-- Page Title Begin -->
     <section class="page-title-bg pt-250 pb-100" data-bg-img="assets/img/section-pattern/page-title.png">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="page-title text-center">
-                        <h2>Контакты</h2>
+                        <h2 th:text="#{contact.contact}"></h2>
                     </div>
                 </div>
             </div>
@@ -91,9 +67,8 @@
                 <div class="col-lg-4">
                     <!-- Contact Info Begin -->
                     <div class="contact-info">
-                        <h3>Контактная информация</h3>
-                        <p> Общество с ограниченной ответственностью “Центр исследовательских технологий"</p>
-
+                        <h3 th:text="#{contact.contact.inform}"></h3>
+                        <p th:text="#{contact.cit.name}"></p>
                         <div class="row">
                             <!-- Single Contact Info -->
                             <div class="col-sm-6 col-lg-12 single-contact-info media align-items-center">
@@ -101,24 +76,22 @@
                                     <img src="assets/img/icons/locationmap.svg" class="svg" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <h4>Адрес</h4>
-                                    <p>660041, Красноярский край, г. Красноярск, пр. Свободный дом 75, пом. 9, кабинет 12</p>
+                                    <h4 th:text="#{contact.address.name}"></h4>
+                                    <p th:text="#{contact.address}"></p>
                                 </div>
                             </div>
                             <!-- End Single Contact Info -->
-
                             <!-- Single Contact Info -->
                             <div class="col-sm-6 col-lg-12 single-contact-info media align-items-center">
                                 <div class="image">
                                     <img src="assets/img/icons/12.svg" class="svg" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <h4>Телефон</h4>
-                                    <p>+7(391)244-03-10</p>
+                                    <h4 th:text="#{contact.tel}"></h4>
+                                    <p th:text="#{contact.tel.number}"></p>
                                 </div>
                             </div>
                             <!-- End Single Contact Info -->
-
                             <!-- Single Contact Info -->
                             <div class="col-sm-6 col-lg-12 single-contact-info media align-items-center">
                                 <div class="image">
@@ -126,20 +99,18 @@
                                 </div>
                                 <div class="media-body">
                                     <h4>Email</h4>
-                                    <p>Cit-krsk@yandex.ru</p>
+                                    <p th:text="#{contact.email}"></p>
                                 </div>
                             </div>
                             <!-- End Single Contact Info -->
-
                             <!-- Single Contact Info -->
                             <div class="col-sm-6 col-lg-12 single-contact-info media align-items-center">
                                 <div class="image">
                                     <img src="assets/img/icons/time-svgrepo-com.svg" class="svg" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <h4>Часы работы</h4>
-                                    <p>пн-пт: 9:00-18:00, <br> сб-вс: выходной
-                                    </p>
+                                    <h4 th:text="#{contact.time}"></h4>
+                                    <p th:text="#{contact.time.day}"><br th:text="#{contact.time.day2}"> </p>
                                 </div>
                             </div>
                             <!-- End Single Contact Info -->
@@ -150,11 +121,11 @@
                 <div class="col-lg-8">
                     <!-- Contact Form Begin -->
                     <div class="contact-form-wrapper">
-                        <h3>Расположение офиса</h3>
+                        <h3 th:text="#{contact.officeLocation}"></h3>
                         <p></p>
-                    <div class="image">
-                        <img src="assets/img/map.png" class="png" alt=""></div>
-					</div>
+                        <div class="image">
+                            <img src="assets/img/map.png" class="png" alt=""></div>
+                    </div>
                     <!-- Contact Form End -->
                 </div>
             </div>
@@ -177,5 +148,4 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/custom.js"></script>
 </body>
-
 </html>

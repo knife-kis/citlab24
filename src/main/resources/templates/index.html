@@ -25,11 +25,9 @@
             </div>
         </div>
         <!-- About Widget End -->
-
         <!-- Flicker Widget Begin -->
         <div class="widget widget_flicker"></div>
         <!-- Flicker Widget End -->
-
         <!-- Contact Widget Begin -->
         <div class="widget widget_contact_info">
             <!-- Widget Logo Begin -->
@@ -37,7 +35,6 @@
                 <h4>Get in touch</h4>
             </div>
             <!-- Widget Logo End -->
-
             <!-- Widget Content Begin -->
             <div class="info-content">
                 <div class="single-info">
@@ -80,12 +77,11 @@
                                 физических факторов</h1>
                             <p>
                             <ul class="menu menu-ff">
-                                <li>Параметры микроклимата: температура, относительная влажность, атмосферное давление, скорость движения воздуха.</li>
-                                <li>Ионизирующие излучения: плотность потока радона, мощность экспозиционной дозы гамма-излучения (МЭД), эквивалентная равновесная объемная активность радона (ЭРОА).
-                                </li>
-                                <li>Виброакустические показатели: уровни звука, уровни звукового давления.</li>
-                                <li>Производительность вентиляционных систем.</li>
-                                <li>Параметры освещенности: искусственная и естественная освещенность.</li>
+                                <li th:text="#{index.micr}"></li>
+                                <li th:text="#{index.ion}"></li>
+                                <li th:text="#{index.vib}"></li>
+                                <li th:text="#{index.vent}"></li>
+                                <li th:text="#{index.light}"></li>
                             </ul>
                             </p>
                         </div>
@@ -247,7 +243,7 @@
                 <div class="section-title text-center">
                     <h3>Об</h3>
                     <h2>Испытательной лаборатории</h2>
-                    <p th:text="#{about}"></p>
+                    <p th:text="#{index.about}"></p>
                 </div>
                 <!-- Section Title End -->
             </div>

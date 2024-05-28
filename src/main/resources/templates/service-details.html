@@ -26,11 +26,6 @@
                 <div class="widget-logo">
                     <img src="assets/img/logo.png" data-rjs="2" alt="">
                 </div>
-
-                <div class="about-content">
-                    <p>Really regard excuse off ten pulled. Lady am room head so lady four or eyes an household
-                        behaviour.</p>
-                </div>
             </div>
             <!-- About Widget End -->
 
@@ -59,25 +54,6 @@
                     <h4>Get in touch</h4>
                 </div>
                 <!-- Widget Logo End -->
-                <!-- Widget Content Begin -->
-                <div class="info-content">
-                    <div class="single-info">
-                        <span>Office Location</span>
-                        <p>173 Collins Street West victoria, Melbourne, Australia</p>
-                    </div>
-                    <div class="single-info">
-                        <span>Business Phone</span>
-                        <p><a href="#">+0096665431</a><a href="#">+0096667331</a></p>
-                    </div>
-                    <div class="single-info">
-                        <span>Support mail</span>
-                        <p>
-                            <a href="#">bizidea@info.com</a>
-                            <a href="#">bizidea@gmail.com</a>
-                        </p>
-                    </div>
-                </div>
-                <!-- Widget Content End -->
             </div>
             <!-- About Widget End -->
             <!-- Offcanvas Button Begin -->
@@ -94,7 +70,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title text-center">
-                        <h2>Услуги</h2>
+                        <h2 th:text="#{service.title}"></h2>
                     </div>
                 </div>
             </div>
@@ -114,7 +90,7 @@
                                 <h4>Виды услуг</h4>
                             </div>
                             <ul>
-                                <li><a href="#vvod">Ввод сооружения в эксплуатацию</a></li>
+                                <li><a href="#vvod" th:text="#{service.exploitation}"></a></li>
                                 <li><a href="#rad">Радиоционный контроль</a></li>
                             </ul>
                         </div>
@@ -128,7 +104,7 @@
                 <div class="col-lg-8">
                     <!-- Service Details Begin -->
                     <div class="service-details">
-                        <h3 class="title mb10" Style="margin-bottom: 25px"><a name="vvod"></a>Ввод сооружения в эксплуатацию</h3>
+                        <h3 class="title mb10" Style="margin-bottom: 25px" th:text="#{service.exploitation}"><a name="vvod"></a></h3>
                         <p Style="margin-bottom: 0">Согласно 55 ст. Градостроительного кодекса ввод в эксплуатацию объектов строительства невозможен без проведения комплексных лабораторных исследований. 
 						Инструментальные и лабораторные методы исследований позволяют устранить существующие дефекты и нарушения. 
 						Причиной таких изъянов может быть как низкое качество работ и несоответствие проектной документации, так и ошибки архитекторов и проектировщиков.
