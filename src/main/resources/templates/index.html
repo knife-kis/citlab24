@@ -252,8 +252,8 @@
 </section>
 <!-- Testimonial End -->
 <div th:replace="~{fragments/footer :: footer}"></div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.min.js"></script> <!-- TODO Переписать на th:src и протекстирвовать-->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 <script src="assets/js/menu.min.js"></script>
 <script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
 <script src="assets/plugins/waypoints/jquery.counterup.min.js"></script>
