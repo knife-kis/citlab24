@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -16,10 +18,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests()
-                .anyRequest().permitAll() // Настройка для разрешения доступа всем пользователям
-                .and()
-                .csrf().disable(); // Отключаем CSRF для простоты
+                .csrf(csrf -> csrf.disable())  // Отключение CSRF защиты
+                .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/**").permitAll()  // Разрешение доступа к публичным страницам без аутентификации
+                        .anyRequest().authenticated()  // Требование аутентификации для всех остальных страниц
+                )
+                .formLogin(withDefaults());
+
         return http.build();
     }
 
